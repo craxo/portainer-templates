@@ -18,13 +18,13 @@
 			],
 			"volumes": [
 				{
-					"container":"/mosquitto/config"
+					"config":"/mosquitto/config"
 				},
 				{
-					"container":"/mosquitto/data"
+					"data":"/mosquitto/data"
 				},
 				{
-					"container":"/mosquitto/log"
+					"log":"/mosquitto/log"
 				}
 			]
 		},
