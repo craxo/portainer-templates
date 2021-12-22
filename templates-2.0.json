@@ -3,6 +3,27 @@
 	"templates":[
 		{
 			"type":1,
+			"title":"Node-Red",
+			"description":"Low-code programming for event-driven applications",
+			"note":"https://hub.docker.com/r/nodered/node-red",
+			"categories":[
+				"docker"
+			],
+			"platform":"linux",
+			"image":"nodered/node-red:latest",
+			"logo":"https://secure.gravatar.com/avatar/f6f37d429a9c6575007e1c72798e0de5.jpg?s=80&r=g&d=mm",
+			"network":"bridge",
+			"ports":[
+				"1880:1880/tcp"
+			],
+			"volumes": [
+				{
+					"container":"/data"
+				}
+			]
+		},
+		{
+			"type":1,
 			"title":"Eclipse Mosquitto",
 			"description":"Eclipse Mosquitto is an open source message broker which implements MQTT version 5, 3.1.1 and 3.1",
 			"note":"https://hub.docker.com/_/eclipse-mosquitto",
