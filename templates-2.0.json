@@ -3,6 +3,33 @@
 	"templates":[
 		{
 			"type":1,
+			"title":"Eclipse Mosquitto",
+			"description":"Eclipse Mosquitto is an open source message broker which implements MQTT version 5, 3.1.1 and 3.1",
+			"note":"https://hub.docker.com/_/eclipse-mosquitto",
+			"categories":[
+				"docker"
+			],
+			"platform":"linux",
+			"image":"eclipse-mosquitto:latest",
+			"logo":"https://d1q6f0aelx0por.cloudfront.net/product-logos/library-eclipse-mosquitto-logo.png",
+			"network":"bridge",
+			"ports":[
+				"1883:1883/tcp"
+			],
+			"volumes": [
+				{
+					"container":"/mosquitto/config"
+				},
+				{
+					"container":"/mosquitto/data"
+				},
+				{
+					"container":"/mosquitto/log"
+				}
+			]
+		},
+		{
+			"type":1,
 			"title":"Registry",
 			"description":"Docker image registry",
 			"categories":[
