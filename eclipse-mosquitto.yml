@@ -1,0 +1,26 @@
+version: "3.9"
+services:
+  broker:
+    image: eclipse-mosquitto:latest
+    restart: always
+    stdin_open: true
+    tty: true
+    network_mode: bridge
+    ports:
+      - 1883:1883
+    volumes:
+      - type: volume
+        source: config
+        target: /mosquitto/config
+      - type: volume
+        source: data
+        target: /mosquitto/data
+      - type: volume
+        source: log
+        target: /mosquitto/log
+
+
+volumes:
+  config:
+  data:
+  log:
