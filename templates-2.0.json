@@ -3,6 +3,27 @@
 	"templates":[
 		{
 			"type":1,
+			"title":"Grafana",
+			"description":"The official Grafana docker container",
+			"note":"https://hub.docker.com/r/grafana/grafana",
+			"categories":[
+				"docker"
+			],
+			"platform":"linux",
+			"image":"nodered/node-red:latest",
+			"logo":"https://secure.gravatar.com/avatar/31cea69afa424609b2d83621b4d47f1d.jpg?s=120&r=g&d=404",
+			"network":"bridge",
+			"ports":[
+				"3000:3000/tcp"
+			],
+			"volumes": [
+				{
+					"container":"/data"
+				}
+			]
+		},
+		{
+			"type":1,
 			"title":"Node-Red",
 			"description":"Low-code programming for event-driven applications",
 			"note":"https://hub.docker.com/r/nodered/node-red",
