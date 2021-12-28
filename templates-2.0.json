@@ -3,6 +3,66 @@
 	"templates":[
 		{
 			"type":1,
+			"title":"InfluxDB",
+			"description":"InfluxDB is an open source time series database for recording metrics, events, and analytics.",
+			"note":"https://hub.docker.com/_/influxdb",
+			"categories":[
+				"docker"
+			],
+			"platform":"linux",
+			"image":"influxdb:latest",
+			"env":[
+				{
+					"name":"DOCKER_INFLUXDB_INIT_MODE",
+					"default": "setup",
+					"label":"Initialization mode"
+				},
+				{
+					"name":"DOCKER_INFLUXDB_INIT_USERNAME",
+					"default":"my-username",
+					"label":"Username"
+				},
+				{
+					"name":"DOCKER_INFLUXDB_INIT_PASSWORD",
+					"default":"my-password",
+					"label":"Password"
+				},
+				{
+					"name":"DOCKER_INFLUXDB_INIT_ORG",
+					"default":"my-org",
+					"label":"Organization"
+				},
+				{
+					"name":"DOCKER_INFLUXDB_INIT_BUCKET",
+					"default":"my-bucket",
+					"label":"Bucket"
+				},
+				{
+					"name":"DOCKER_INFLUXDB_INIT_RETENTION",
+					"default":"1w",
+					"label":"Retention"
+				},
+				{
+					"name":"DOCKER_INFLUXDB_INIT_ADMIN_TOKEN",
+					"default":"my-super-secret-auth-token",
+					"label":"Admin Token"
+				}
+			],
+			"interactive":true,
+			"logo":"https://www.influxdata.com/wp-content/uploads/Favicon-blue-200x200.png",
+			"network":"bridge",
+			"ports":[
+				"8086:8086/tcp"
+			],
+			"volumes": [
+				{
+					"influxdb2":"/var/lib/influxdb2",
+					"influxdb":"/var/lib/influxdb"
+				}
+			]
+		},
+		{
+			"type":1,
 			"title":"Grafana",
 			"description":"The official Grafana docker container",
 			"note":"https://hub.docker.com/r/grafana/grafana",
@@ -15,7 +75,7 @@
 			"logo":"https://secure.gravatar.com/avatar/31cea69afa424609b2d83621b4d47f1d.jpg?s=120&r=g&d=404",
 			"network":"bridge",
 			"ports":[
-				"1880:1880/tcp"
+				"3000:3000/tcp"
 			],
 			"volumes": [
 				{
