@@ -30,7 +30,7 @@
 				{
 					"name":"DOCKER_INFLUXDB_INIT_ORG",
 					"default":"my-org",
-					"label":"Orginization"
+					"label":"Organization"
 				},
 				{
 					"name":"DOCKER_INFLUXDB_INIT_BUCKET",
