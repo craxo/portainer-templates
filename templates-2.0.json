@@ -10,7 +10,8 @@
 				"docker"
 			],
 			"platform":"linux",
-			"image":"nodered/node-red:latest",
+			"image":"grafana/grafana:latest",
+			"interactive":true,
 			"logo":"https://secure.gravatar.com/avatar/31cea69afa424609b2d83621b4d47f1d.jpg?s=120&r=g&d=404",
 			"network":"bridge",
 			"ports":[
@@ -32,6 +33,7 @@
 			],
 			"platform":"linux",
 			"image":"nodered/node-red:latest",
+			"interactive":true,
 			"logo":"https://secure.gravatar.com/avatar/f6f37d429a9c6575007e1c72798e0de5.jpg?s=80&r=g&d=mm",
 			"network":"bridge",
 			"ports":[
@@ -53,6 +55,7 @@
 			],
 			"platform":"linux",
 			"image":"eclipse-mosquitto:latest",
+			"interactive":true,
 			"logo":"https://d1q6f0aelx0por.cloudfront.net/product-logos/library-eclipse-mosquitto-logo.png",
 			"network":"bridge",
 			"ports":[
